@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+.color-controls {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.color-palettes {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy-palette {
+  font-size: 0.8rem;
+  display: flex;
+}
+
+.palette {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #e7e7e7;
+}
+
+.copy-palette span > svg {
+  height: 0.9rem;
+  width: 0.9rem;
+  margin-left: 0.3rem;
+  cursor: pointer;
+}
+
+.copy-palette span > svg:active {
+  background-color: rgb(209, 209, 209);
+}
+
+#baseColor {
+  width: 80%;
+  border: 0;
+  /* margin-bottom: 1rem; */
+}
+
+.rules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.rules button {
+  background: #868686;
+  border: 1px solid grey;
+  padding: 0.2rem 0.5rem;
+  color: white;
+}
+
+#colorPalette {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-box {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.color-box:active {
+  scale: 1.1;
+}
+
+.save {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Palette Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Color Palette Generator</h1>
+    <div class="color-controls">
+      <!-- Color controls will be added here -->
+      <div class="palette">
+        <input type="color" id="baseColor" value="#ff5733" onchange="getBase()" />
+        <div class="copy-palette">
+          <div class="hex"></div>
+          <span onclick="copyColorToClipboard()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M21 8.94a1.31 1.31 0 0 0-.06-.27v-.09a1.07 1.07 0 0 0-.19-.28l-6-6a1.07 1.07 0 0 0-.28-.19a.32.32 0 0 0-.09 0a.88.88 0 0 0-.33-.11H10a3 3 0 0 0-3 3v1H6a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-1h1a3 3 0 0 0 3-3V8.94Zm-6-3.53L17.59 8H16a1 1 0 0 1-1-1ZM15 19a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h1v7a3 3 0 0 0 3 3h5Zm4-4a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3v3a3 3 0 0 0 3 3h3Z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="rules">
+        <button onclick="generateComplementaryPalette()">Complementary</button>
+        <button onclick="generateAnalogousPalette()">Analogous</button>
+        <button onclick="generateTriadicPalette()">Triadic</button>
+        <button onclick="generateSplitComplementaryPalette()">Split Complementary</button>
+        <button onclick="generateMonochromaticPalette()">Monochromatic</button>
+        <button onclick="generateTetradicPalette()">Tetradic (Double Complementary)</button>
+      </div>
+    </div>
+    <h1>Color Palettes</h1>
+    <div class="color-palettes">
+      <!-- Color palettes will be added here -->
+      <div id="colorPalette"></div>
+    </div>
+    <div class="save">
+      <button class="save-color-palette" onclick="savePalette()">Save</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
